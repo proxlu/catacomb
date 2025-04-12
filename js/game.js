@@ -14,6 +14,9 @@ const config = {
         preload: preload,
         create: create,
         update: update
+    },
+    canvas: {
+        willReadFrequently: true
     }
 };
 
@@ -55,10 +58,10 @@ function create() {
     setupMobileControls();
     
     // Criar animações
-    createAnimations();
+    createAnimations.call(this);
     
     // Criar cena do menu
-    createMenu();
+    createMenu.call(this);
 }
 
 function createAnimations() {
@@ -140,17 +143,17 @@ function createMenu() {
         if (e.key === 'Enter') {
             playerName = nameInput.value || 'Jogador';
             nameInput.remove();
-            startGame();
+            startGame.call(this);
         }
     });
 }
 
 function startGame() {
     // Iniciar contagem regressiva
-    startCountdown();
+    startCountdown.call(this);
     
     // Gerar nível
-    generateLevel();
+    generateLevel.call(this);
     
     // Configurar colisões
     this.physics.add.overlap(player, spikes, hitSpike, null, this);
@@ -178,7 +181,7 @@ function startCountdown() {
             } else {
                 countdownText.destroy();
                 gameStarted = true;
-                startTimer();
+                startTimer.call(this);
             }
         },
         loop: true
@@ -198,7 +201,7 @@ function startTimer() {
             timerText.setText(gameTime.toString());
             
             if (gameTime <= 0) {
-                gameOver();
+                gameOver.call(this);
             }
         },
         loop: true
@@ -343,17 +346,17 @@ function ensurePathToDoor(level) {
 
 function hitSpike() {
     this.sound.play('damage');
-    gameOver();
+    gameOver.call(this);
 }
 
 function hitEnemy() {
     this.sound.play('damage');
-    gameOver();
+    gameOver.call(this);
 }
 
 function reachDoor() {
     this.sound.play('win');
-    victory();
+    victory.call(this);
 }
 
 function gameOver() {
