@@ -1,5 +1,5 @@
 const config = {
-    type: Phaser.AUTO,
+    type: Phaser.WEBGL,
     width: 720,
     height: 720,
     parent: 'game-container',
@@ -17,7 +17,20 @@ const config = {
     },
     canvas: {
         willReadFrequently: true
-    }
+    },
+    render: {
+        pixelArt: true,
+        antialias: false,
+        roundPixels: true
+    },
+    scale: {
+        mode: Phaser.Scale.FIT,
+        autoCenter: Phaser.Scale.CENTER_BOTH,
+        width: 720,
+        height: 720
+    },
+    backgroundColor: '#000000',
+    powerPreference: 'high-performance'
 };
 
 const game = new Phaser.Game(config);
