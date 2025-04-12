@@ -1,5 +1,5 @@
 const config = {
-    type: Phaser.WEBGL,
+    type: Phaser.CANVAS,
     width: 720,
     height: 720,
     parent: 'game-container',
@@ -29,8 +29,7 @@ const config = {
         width: 720,
         height: 720
     },
-    backgroundColor: '#000000',
-    powerPreference: 'high-performance'
+    backgroundColor: '#000000'
 };
 
 const game = new Phaser.Game(config);
