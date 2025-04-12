@@ -37,17 +37,17 @@ let mobileControls = {
 
 function preload() {
     // Carregar sprites
-    this.load.spritesheet('tiles', 'https://proxlu.github.io/catacomb/assets/tiles.png', { frameWidth: 48, frameHeight: 48 });
-    this.load.spritesheet('player', 'https://proxlu.github.io/catacomb/assets/player.png', { frameWidth: 32, frameHeight: 32 });
-    this.load.spritesheet('enemy', 'https://proxlu.github.io/catacomb/assets/enemy.png', { frameWidth: 32, frameHeight: 32 });
+    this.load.spritesheet('tiles', 'assets/tiles.png', { frameWidth: 48, frameHeight: 48 });
+    this.load.spritesheet('player', 'assets/player.png', { frameWidth: 32, frameHeight: 32 });
+    this.load.spritesheet('enemy', 'assets/enemy.png', { frameWidth: 32, frameHeight: 32 });
     
     // Carregar áudios
-    this.load.audio('count', 'https://proxlu.github.io/catacomb/assets/count.ogg');
-    this.load.audio('damage', 'https://proxlu.github.io/catacomb/assets/damage.ogg');
-    this.load.audio('gameover', 'https://proxlu.github.io/catacomb/assets/gameover.ogg');
-    this.load.audio('jump', 'https://proxlu.github.io/catacomb/assets/jump.ogg');
-    this.load.audio('land', 'https://proxlu.github.io/catacomb/assets/land.ogg');
-    this.load.audio('win', 'https://proxlu.github.io/catacomb/assets/win.ogg');
+    this.load.audio('count', 'assets/count.ogg');
+    this.load.audio('damage', 'assets/damage.ogg');
+    this.load.audio('gameover', 'assets/gameover.ogg');
+    this.load.audio('jump', 'assets/jump.ogg');
+    this.load.audio('land', 'assets/land.ogg');
+    this.load.audio('win', 'assets/win.ogg');
 }
 
 function create() {
