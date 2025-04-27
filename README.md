@@ -65,4 +65,4 @@ Encontre a porta de saída antes que o tempo acabe! Cada fase é gerada procedur
 
 ## 📝 Licença
 
-Este projeto está sob a licença MIT. 
+Este projeto está sob a licença AGPL. 
